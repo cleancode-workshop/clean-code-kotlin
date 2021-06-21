@@ -20,3 +20,10 @@ dependencies {
     testImplementation "io.kotest:kotest-assertions-json:$kotestVersion"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junit5Version"
 }
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events 'PASSED', 'FAILED', 'SKIPPED'
+    }
+}
